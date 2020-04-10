@@ -1,0 +1,301 @@
+.accordion {
+	@include span-columns(12);
+	@include clearfix;
+	margin-bottom: 14px;
+
+	.accordion_header_container {
+		@include span-columns(12);
+		text-align: center;
+		background-color: $veryLightGray;
+	}
+	
+	.accordion_header {
+		@include clearfix;
+		//padding: 40px 0;
+		text-align: center;
+		min-height: 250px;
+		height: 250px;
+		//display: inline-block;
+		
+		@include media($mobile) {
+			display: none;
+		}
+		
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -0.25em;
+		}
+		
+		.accordion_image {
+			@include span-columns(3);
+			@include shift(1);
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+			
+			img {
+				//position: relative;
+				//top: 60px;
+			}
+		}
+		
+		.header_copy {
+			@include span-columns(6);
+			text-align: left;
+			//padding-top: 8.5%;
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+			
+			h3 {
+				font-size: 48px;
+				line-height: 1;
+				margin-top: 0;
+				margin-bottom: 20px;
+				@include avenirNextLight;
+			}
+			
+			p {
+				vertical-align: bottom;
+			}
+		}
+	}
+	
+	.accordion_header_mobile_link {
+		color: inherit;
+		height: 100px;
+		//margin-top: 15px;
+		margin-bottom: 0px;
+		text-align: left;
+		display: none;
+		
+		@include media($mobile) {
+			display: block;
+		}
+	
+		.accordion_header_mobile {
+			display: inline-block;
+			@include clearfix;
+			width: 100%;
+			position: relative;
+			height: 100%;
+			
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				margin-right: -0.25em;
+			}
+			
+			.accordion_header_icon_mobile {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 20px;
+				
+				img {
+					height: 100px;
+				}
+			}
+			
+			.accordion_header_copy_mobile {
+				display: inline-block;
+				vertical-align: middle;
+				width: 50%;
+				
+				h2 {
+					text-transform: lowercase;	
+				}
+			}
+		}
+	}
+	
+	.image_offset {
+		position: absolute;
+		top: -35px !important;
+	}
+	
+	.accordion_expand_close, .watch_more_expand_close {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		background-color: $white;
+		padding: 10px;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		margin-top: -30px;
+		cursor: pointer;
+		
+		a {
+			font-size: 30px;
+			line-height: 40px;
+			font-weight: bold;
+			padding-left: 2px;
+			
+			
+			&.accordion-plus {
+			
+				&:before {
+					content: '+';
+				}
+			}
+			
+			&.accordion-minus {
+			
+				&:before {
+					content: '-';
+				}
+			}
+		}
+	}
+	
+	.accordion_content {
+		@include span-columns(12);
+		padding-top: 20px;
+		
+		.content_text {
+			@include span-columns(6);
+			
+			h3 {
+				color: $darkGray;
+				font-size: 24px;
+				@include avenirNextLight;
+				margin: 0 0 10px;
+			}
+			
+			p {
+				font-size: 15px;
+				@include avenirNextReg;
+				margin-bottom: 15px;
+			}
+		}
+		
+		.column {
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		
+		.content_image {
+			@include span-columns(6);
+			
+			img {
+				width: 100%;
+			}
+		}
+		
+		.one_column_section {
+			@include span-columns(12);
+			padding-bottom: 20px;
+			
+			.column {
+				@include span-columns(12);
+				@include media($mobile) {
+					@include span-columns(4);
+				}
+				
+				p {
+			
+					iframe {
+						@include span-columns(12);
+						height: 800px;
+						border: none;
+						outline: none;
+					}
+				}
+				
+			}
+		}
+		
+		.two_column_section {
+			@include span-columns(12);
+			padding-bottom: 20px;
+			display: inline-block;
+			
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				margin-right: -0.25em;
+			}
+			
+			.column {
+				@include span-columns(5.9);
+				float: none;
+				display: inline-block;
+				vertical-align: middle;
+				@include media($mobile) {
+					@include span-columns(4);
+				}
+			}
+		}
+		
+		.five_column_section {
+			@include span-columns(12);
+			padding-bottom: 20px;
+			
+			.column {
+				@include span-columns(2.4);
+				@include media($mobile) {
+					@include span-columns(4);
+				}
+				
+				img {
+					width: auto;
+				}
+			}
+		}
+		
+		.three_column_section {
+			@include span-columns(12);
+			padding-bottom: 20px;
+			
+			.column {
+				@include span-columns(4);
+				@include media($mobile) {
+					@include span-columns(4);
+				}
+				
+				h3 {
+					margin: 0 0 10px;
+				}
+				
+				img {
+					width: auto;
+				}
+			}
+		}
+		
+		.four_column_chart_section {
+			@include span-columns(12);
+			padding-bottom: 20px;
+			
+			table, tbody {
+				@include span-columns(12);
+			}
+			
+			tr {
+				@include span-columns(12);
+				padding: 20px;
+				
+				td {
+					@include span-columns(3);
+				}
+				
+				&.even_row {
+					background-color: $veryLightGray;
+				}
+			}
+		}
+	}
+}

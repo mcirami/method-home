@@ -1,0 +1,115 @@
+.hero {
+	@include span-columns(12);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	@include media($mobile) {
+		background-size: cover;
+		min-height: 160px !important;
+	}
+	
+	.container {
+		position: relative;
+		@include media($mobile) {
+			min-height: 160px !important;
+		}
+	}
+	
+	h1, .press_hero_text h1 {
+		text-transform: lowercase;
+		color: $white;
+		font-size: 82px;
+		@include avenirNextLight;	
+		position: absolute;
+		top: 50%;
+		margin-top: -41px;
+		line-height: 1.1;
+		
+		@include media($tablet) {
+			font-size: 60px;
+		}
+		
+		@include media($mobile) {
+			font-size: 40px !important;
+		}
+	}
+	
+	h3 {
+		position: absolute;
+		top: 33%;
+		left: 5px;
+	}
+	
+	.press_hero_text {
+		position: absolute;
+		top: 50%;
+		margin-top: -41px;
+		text-align: left;
+		color: $white;
+		
+		h1 {
+			position: relative;
+			top: inherit;
+			margin-top: 0;
+			padding-bottom: 20px;
+		}
+	}
+	
+	&.hero_text_left {
+		background-position: right 55% top;
+		text-align: left;
+		
+		h1 {
+			left: 0;
+		}
+		
+		.press_hero_text {
+			left: 0;
+			
+			h1 {
+				left: inherit;
+			}
+		}
+	}	
+	
+	&.hero_text_right {
+		background-position: left 55% top;
+		text-align: right;
+		
+		h1 {
+			right: 0;
+			
+			@include media($tablet) {
+				right: 7%;
+			}
+		}
+		
+		.press_hero_text {
+			right: 10px;
+			
+			@include media($tablet) {
+				
+				p {
+					display: none;
+				}
+			}
+			
+			h1 {
+				right: initial;
+			}
+		}
+	}
+}
+
+.beyond_hero {
+	
+	h1 {
+		font-size: 72px;
+		@include avenirNextLight;
+		font-weight: 500;
+		
+		@include media($tablet) {
+			font-size: 60px;
+		}
+	}
+}

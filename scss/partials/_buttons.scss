@@ -1,0 +1,155 @@
+// Buttons
+.button-wrap {
+	display: block;
+}
+
+.shortcode-button {
+	@include avenirNextReg;
+	text-transform: lowercase;
+	display: inline-block;
+	width: auto;
+	color: $white;
+	line-height: 1;
+	
+	&:after {
+		content: "\f0da";
+		font-family: FontAwesome;
+		font-size: 18px;
+		margin-left: 7px;
+	}
+	
+	&:hover {
+		color: $white;
+	}
+	
+	&.border-button {
+		color: $darkGray;
+		
+		&.blue-button {
+			@include borderButton($cleanHappyBlue);
+		}
+		
+		&.secondblue-button {
+			@include borderButton($shopSecondBlue);
+		}
+		
+		&.orange-button {
+			@include borderButton($orange);
+		}
+		
+		&.pink-button {
+			@include borderButton($shopPink);
+		}
+		
+		&.purple-button {
+			@include borderButton($aboutPurple);
+		}
+		
+		&.green-button {
+			@include borderButton($beyondGreen);
+		}
+		
+		&.secondgreen-button {
+			@include borderButton($shopSecondGreen);
+		}
+		
+		&.yellow-button {
+			@include borderButton($yellow);
+		}
+		
+		&.gray-button {
+			@include borderButton($darkGray);
+		}
+	}
+	
+	&.bg-button {
+		background-color: $white;
+		
+		&.blue-button {
+			@include bgButton($cleanHappyBlue);
+		}
+		
+		&.secondblue-button {
+			@include bgButton($shopSecondBlue);
+		}
+		
+		&.orange-button {
+			@include bgButton($orange);
+		}
+		
+		&.pink-button {
+			@include bgButton($shopPink);
+		}
+		
+		&.purple-button {
+			@include bgButton($aboutPurple);
+		}
+		
+		&.green-button {
+			@include bgButton($beyondGreen);
+		}
+		
+		&.secondgreen-button {
+			@include bgButton($shopSecondGreen);
+		}
+		
+		&.yellow-button {
+			@include bgButton($yellow);
+		}
+		
+		&.gray-button {
+			@include bgButton($darkGray);
+		}
+	}
+	
+	&.blue-button {
+		@include buttonColor($cleanHappyBlue);
+	}
+	
+	&.secondblue-button {
+		@include buttonColor($shopSecondBlue);
+	}
+	
+	&.orange-button {
+		@include buttonColor($orange);
+	}
+	
+	&.pink-button {
+		@include buttonColor($shopPink);
+	}
+	
+	&.purple-button {
+		@include buttonColor($aboutPurple);
+	}
+	
+	&.green-button {
+		@include buttonColor($beyondGreen);
+	}
+	
+	&.secondgreen-button {
+		@include buttonColor($shopSecondGreen);
+	}
+	
+	&.yellow-button {
+		@include buttonColor($yellow);
+	}
+	
+	&.gray-button {
+		@include buttonColor($darkGray);
+	}
+}
+
+.large-button {
+	padding: 10px 25px;
+	font-size: 23px;
+}
+
+.small-button {
+	@include avenirNextDemi;
+	padding: 8px 25px;
+	font-size: 14px;
+	
+	&:after {
+		font-size: 12px;
+	}
+}

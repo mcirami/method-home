@@ -1,0 +1,108 @@
+.column_section {
+	margin: 40px 0;
+	text-align: center;
+	
+	.dotted_line {
+		width: 80%;
+		height: 1px;
+		border-top: 1px dotted $lightGray;
+		position: absolute;
+		top: 15%;
+		left: 10%;
+	}
+	
+	.columns {
+		@include span-columns(12);
+		margin-bottom: 20px;
+	}
+	
+	.column {
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	
+		img {
+			background-color: $white;
+		}
+		
+		.column_copy {
+			text-align: left;
+			
+			h3 {
+				margin: 20px 0 4px;
+				font-size: 18px;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+	}
+	
+	.button-wrap {
+		float: right;
+	}
+}
+
+.one_column_section {
+	@include span-columns(12);
+	padding: 10px 0 40px;
+	
+	.column {
+		@include span-columns(12);
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+}
+
+.two_column_section {
+	@include span-columns(12);
+	padding: 10px 0 40px;
+	
+	.column {
+		@include span-columns(6);
+		@include omega(2n);
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+}
+
+.five_column_section {
+	@include span-columns(12);
+	padding: 10px 0 40px;
+	
+	.dotted_line {
+		top: 19%;
+	}
+	
+	.column {
+		@include span-columns(2.4);
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+}
+
+.three_column_section {
+	@include span-columns(12);
+	padding: 10px 0 40px;
+	
+	.dotted_line {
+		width: 70%;
+		left: 15%;	
+	}
+	
+	.column {
+		@include span-columns(4);
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+		
+		h3 {
+			margin: 0 0 10px;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+// general wrapper class
+.container {
+	@extend %post;
+	//overflow-x: hidden;
+	// Set max-width here
+	@include media($break960){
+		padding: 0px 20px;	
+	}
+	
+	
+
+	.content {
+		@include span-columns(8);
+		padding: 2rem 0;
+	}
+	.sidebar {
+		@include span-columns(4);
+		@include omega;
+		padding: 2rem 0;
+	}
+}

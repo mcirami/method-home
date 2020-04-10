@@ -1,0 +1,38 @@
+.ocean_plastic {
+	@include span-columns(12);
+	
+	> article {
+		@include span-columns(12);
+	}
+	
+	.ocean_plastic_header {
+		margin-bottom: 40px;
+	}
+	
+	.ocean_plastic_solutions {
+		@include span-columns(12);
+		background-color: $veryLightGray;
+		padding: 20px 0;
+		margin-bottom: 40px;
+		clear: both;
+		
+		.plastic_container {
+			max-width: 95em;
+			margin: auto;
+			clear: both;
+		}
+	
+		.ocean_plastic_solution {
+			@include span-columns(12);
+			padding: 40px 10px;
+			
+			img {
+				@include span-columns(7);
+			}
+			
+			.solution_text {
+				@include span-columns(5);
+			}
+		}
+	}
+}

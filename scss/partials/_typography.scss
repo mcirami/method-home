@@ -1,0 +1,10 @@
+// typography baselines and @font face setups
+
+html {
+	@include avenirNextReg;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+	$font-family: $helvetica;
+}

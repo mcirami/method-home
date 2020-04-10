@@ -1,0 +1,162 @@
+.beyond_bottle_section {
+	text-align: center;
+	
+	&:first-child {
+	
+		@include media($mobile) {
+			margin-top: 20px;
+		}
+	}
+	
+	.we_are_text {
+		font-size: 55px;
+		line-height: 60px;
+		
+		@include media($mobile) {
+			display: none;
+		}
+	}
+	
+	.five_column_section {
+		
+		@include media($mobile) {
+			display: none;
+		}
+	}
+	
+	.sub_page {
+		@include span-columns(12);
+	
+		.sub_page_content {
+			@include span-columns(12);
+			margin: auto;
+			float: none;
+			height: 100%;
+			max-width: 95em;
+			
+			&:last-child {
+				margin-right: auto;
+			}
+		}
+	
+		@include media($mobile) {
+			height: 100px;
+			margin-top: 15px;
+			margin-bottom: 0px;
+		}
+		
+		.container {
+			height: 100%;
+			
+			@include media($mobile) {
+				padding: 0px;
+			}
+		}
+		
+		.featured_image {
+			@include span-columns(3);
+			position: absolute;
+			bottom: 0;
+			
+			@include media($mobile) {
+				display: none;
+			}
+				
+			img {
+				width: auto;
+				height: auto;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				text-align: right;
+			}
+			
+			&.image_left {
+				left: 0;
+			}
+			
+			&.image_right {
+				right: 0;
+			}
+		}
+		
+		.page_info {
+			//@include span-columns(5);
+			@include shift(3.5);
+			width: 40%;
+			vertical-align: middle;
+			
+			@include media($mobile) {
+				display: none;
+			}
+			
+			h2 {
+				font-size: 46px;
+				line-height: 48px;
+				
+				@include media($tablet) {
+					font-size: 36px;
+					line-height: 38px;
+				}
+			}
+		}
+		
+		.beyond_link {
+			
+			@include media($mobile) {
+				color: inherit;
+			}
+		
+			.page_info_mobile {
+				display: none;
+				
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+					margin-right: -0.25em;
+				}
+				
+				@include media($mobile) {
+					@include clearfix;
+					display: inline-block;
+					width: 100%;
+					position: relative;
+					top: -100px;
+				}
+				
+				.beyond_icon {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 20px;
+					
+					img {
+						height: 100px;
+					}
+				}
+				
+				.beyond_copy_mobile {
+					display: inline-block;
+					vertical-align: middle;
+					width: 50%;
+					
+					h2 {
+						text-transform: lowercase;	
+					}
+				}
+			}
+		}
+	}
+	
+	.back_to_top {
+			
+		@include media($mobile) {
+			display: none;
+		}
+	}
+}
+
+.bottle_bottom_container {
+	clear: both;
+}
